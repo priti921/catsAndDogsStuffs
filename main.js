@@ -32,18 +32,20 @@ function	renderHTML(data) {
  				htmlString +=  " and " + data[i].foods.likes[ii];
  			}
  		}
- 	}
- 	htmlString += ' and dislikes ';
+ 			htmlString += ' and dislikes ';
 
- 	for(ii = 0; ii < data[i].foods.dislikes.length; ii++) {
- 			if (ii == 0) {
- 				htmlString += data[i].foods.dislikes[ii];
- 			} else {
- 				htmlString +=  " and " + data[i].foods.dislikes[ii];
- 			}
- 		}
+ 	for (ii = 0; ii < data[i].foods.dislikes.length; ii++) {
+      if (ii == 0) {
+        htmlString += data[i].foods.dislikes[ii];
+      } else {
+        htmlString += " and " + data[i].foods.dislikes[ii];
+      }
+    }
+
 
  	htmlString += ' .</p>';
+ 	}
+ 
 
 		animalContainer.insertAdjacentHTML('beforeend' , htmlString);
 }
